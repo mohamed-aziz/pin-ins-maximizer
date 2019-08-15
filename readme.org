@@ -1,0 +1,21 @@
+** What ?
+   This can be used as a side channel attack for poorly made programs or ctf tasks, this maximizes the number of executed instructions, if it is dependent on a correct input, think of something like a strcmp. Other techniques that can be used are corrupting the program on a correct check and using a fuzz er but this just uses pin.
+
+** Why ?
+   Other tools are poorly coded, this is like 30 lines of code, and has multi processes.
+
+** How ?
+
+   Download Pin from [[https://software.intel.com/en-us/articles/pin-a-dynamic-binary-instrumentation-tool][here]] and compile the examples, make sure what pintool you want to use (inscount0 counts all the instructions one by one, inscount1 and 2 count instructions per basic block).
+   
+   Edit solver.py for your needs and launch it.
+
+   #+BEGIN_SRC sh
+     python3 solver.py 5
+   #+END_SRC
+
+   Where 5 is the number of processes in parallel.
+
+   
+   
+  
